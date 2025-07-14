@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+
+- story: conversación inicial
+  steps:
+  - intent: greet
+  - action: action_respond_to_greeting
+  - intent: introduce_yourself
+  - action: action_respond_to_introduction
+  - intent: ask_about_identity
+  - action: action_respond_to_identity_question
+
+- story: conversación sobre libros
+  steps:
+  - intent: ask_about_books
+  - action: action_respond_to_book_question
+  - intent: ask_philosophical_question
+  - action: action_respond_to_philosophical_question
+  - intent: ask_about_emotions
+  - action: action_respond_to_emotion_question
+
+- story: conversación filosófica
+  steps:
+  - intent: ask_philosophical_question
+  - action: action_respond_to_philosophical_question
+  - intent: ask_about_emotions
+  - action: action_respond_to_emotion_question
+

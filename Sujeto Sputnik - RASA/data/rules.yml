@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+
+- rule: Saludar siempre
+  steps:
+  - intent: greet
+  - action: action_respond_to_greeting
+
+- rule: Responder a presentación
+  steps:
+  - intent: introduce_yourself
+  - action: action_respond_to_introduction
+
+- rule: Responder a preguntas de identidad
+  steps:
+  - intent: ask_about_identity
+  - action: action_respond_to_identity_question
+
+- rule: Responder a preguntas sobre emociones
+  steps:
+  - intent: ask_about_emotions
+  - action: action_respond_to_emotion_question
+
+- rule: Responder a preguntas filosóficas
+  steps:
+  - intent: ask_philosophical_question
+  - action: action_respond_to_philosophical_question
+
+- rule: Responder a explicaciones de conceptos humanos
+  steps:
+  - intent: explain_human_concept
+  - action: action_respond_to_concept_explanation
+
+- rule: Responder a preguntas sobre libros
+  steps:
+  - intent: ask_about_books
+  - action: action_respond_to_book_question
+
+- rule: Responder a fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_respond_to_fallback

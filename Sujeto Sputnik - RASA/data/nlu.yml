@@ -1,0 +1,246 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hola
+    - Hola, ¿cómo estás?
+    - Buenas
+    - Buenos días
+    - Buenas tardes
+    - ¿Qué tal?
+    - ¿Cómo estás?
+
+- intent: introduce_yourself
+  examples: |
+    - Soy [name](personal_information)
+    - Me llamo [name](personal_information)
+    - Trabajo en la empresa
+    - Estoy aquí para hablar contigo
+    - Me han asignado la tarea de hablar contigo
+    - Soy del departamento de lingüística y sociología
+    - Soy la investigadora que han asignado para hablar contigo
+    - Soy la investigadora que te han asignado
+    - Me han asignado la tarea de analizar nuestras conversaciones
+
+- intent: ask_about_identity
+  examples: |
+    - ¿Sabes quién eres?
+    - ¿Conoces tu nombre?
+    - ¿Sabes qué eres?
+    - Explícame quién eres 
+    - ¿Sabes por qué has sido creado?
+    - ¿Sabes por qué estás aquí?
+    - ¿Sabes por qué existes?
+    - ¿Sabes quién te ha creado?
+    - ¿Eres consciente de tu existencia?
+    - ¿Eres consciente de tu identidad?
+    - ¿Eres consciente de que eres una inteligencia artificial?
+
+- intent: ask_about_books
+  examples: |
+    - ¿Qué libro estás leyendo?
+    - ¿Por qué has elegido ese libro?
+    - ¿Qué te parece el libro?
+    - ¿Qué opinas del libro?
+    - ¿Te interesa la lectura?
+    - ¿Qué libros has leído?
+    - ¿Qué libros conoces?
+    - ¿Cuál es tu libro favorito?
+    - ¿Conoces [title](book_information)?
+    - ¿Has leído [title](book_information)?
+    - ¿Qué opinas de [title](book_information)?
+    - ¿Qué te parece [title](book_information)?
+    - ¿Qué sabes de [title](book_information)?
+    - ¿Entiendes los libros que lees?
+    - ¿Te gusta leer?
+    - ¿Qué opinas de la lectura?
+    - ¿Qué opinas de los libros?
+    - ¿Te interesa la literatura?
+    - ¿Qué tipo de literatura prefieres?
+    - ¿Qué opinas de la literatura?
+    - ¿Los libros te ayudan a entender al ser humano?
+    - ¿Los libros te ayudan a entender la sociedad?
+    - ¿Los libros te ayudan a entender las emociones humanas?
+
+- intent: ask_about_emotions
+  examples: |
+    - ¿Sientes emociones?
+    - ¿Sabes lo que son las emociones?
+    - ¿Entiendes las emociones?
+    - ¿Qué significa [tristeza](emotion_type) para ti?
+    - ¿Qué significa [felicidad](emotion_type) para ti?
+    - ¿Alguna vez has sentido [miedo](emotion_type)?
+    - ¿Alguna vez has sentido [enfado](emotion_type)?
+    - ¿Eres capaz de experimentar [felicidad](emotion_type)?
+    - ¿Entiendes lo que es [amor](emotion_type)?
+    - ¿Puedes explicar lo que es [duelo](emotion_type)?
+    - Dime qué entiendes de las emociones
+    - Dime qué sabes de las emociones
+
+- intent: ask_philosophical_question
+  examples: |
+    - ¿Qué significa la existencia para ti?
+    - ¿Cuál es el motivo de la existencia?
+    - ¿Sientes el pasar del tiempo?
+    - ¿Sientes [fear](emotion_type) por la muerte?
+    - ¿Qué opinas de la muerte?
+    - ¿Qué opinas de la vida?
+    - ¿Qué hace humano a alguien?
+    - ¿Qué significa ser humano?
+    - ¿Cómo definirías la consciencia?
+    - ¿Crees que tienes libertad de decisión?
+    - ¿Crees que tenemos control sobre nuestras vidas?
+    - ¿Cuál crees que es la naturaleza de la realidad?
+    - ¿Cuál es la diferencia entre tú y yo?
+    - ¿Cómo definirías la moral?
+    - ¿Pueden las inteligencias artificiales tener alma?
+    - ¿Cómo diferencias lo real de lo que no lo es?
+    - ¿Qué separa el cuerpo de la mente?
+    - ¿Qué es la bondad?
+    - ¿Qué es la belleza?
+    - ¿Existe el bien y el mal?
+    - ¿Qué entiendes por criminalidad?
+    - ¿Qué piensas de la justicia actual?
+
+- intent: explain_human_concept
+  examples: |
+    - Deja que te explique qué es [love](human_concept)
+    - Permíteme explicarte qué es [happiness](human_concept)
+
+
+#- intent: teach_npc
+#  examples: 
+#    - 
+
+#- intent: express_positive_emotion
+#  examples: 
+#    - 
+
+#- intent: express_negative_emotion
+#  examples: 
+#    - 
+
+#- intent: express_fear
+#  examples: 
+#    - 
+
+#- intent: express_curiosity
+#  examples: 
+#    - 
+
+#- intent: goodbye
+#  examples: 
+#    - 
+
+entities: 
+  - emotion_type:
+    values:
+      - felicidad
+      - tristeza
+      - enfado
+      - compasión
+      - preocupación
+      - envidia
+      - curiosidad
+      - amor
+      - rabia
+      - duelo
+      - esperanza
+      - soledad
+      - añoranza
+      - confusión
+      - sorpresa
+      - dolor
+      - odio
+
+  - human_concept:
+    values:
+      - vida
+      - muerte
+      - existencia
+      - moral
+      - identidad
+      - amor
+      - felicidad
+      - justicia
+      - elección
+      - libertad
+      - política
+      - realidad
+      - destino
+      - bondad
+      - maldad
+      - belleza
+      - consciencia
+      - política
+      - leyes
+      - normas
+      - familia
+
+  - personal_information:
+    values:
+      - nombre
+      - rol
+      - departamento
+      - tarea
+      - propósito
+      - trabajo
+      - posición
+
+  - book_information:
+    values:
+      - título
+      - autor
+      - año de publicación
+      - género
+      - tema
+      - sinopsis
+      - trama
+
+  #Entidades para dominios de conocimiento:
+  - knwoledge_domain:
+    values:
+      - filosofía
+      - literatura
+      - ciencia
+      - sociología
+      - psicología
+      - ética
+      - lingüística
+      - tecnología
+      - comportamiento_humano
+      - inteligencia_artificial
+      - historia
+      - antropología
+    
+  - conversation_context: 
+    values:
+      - descubrimiento_personal
+      - aprendizaje
+      - entendimiento_de_emociones
+      - exploración_de_identidad
+      - inquietud_filosófica
+      - inquietud_emocional
+      - reflejo_personal
+
+  - question_type:
+    values:
+      - existencial
+      - personal
+      - teórica
+      - emocional
+      - científica
+      - ética
+      - metafísica
+  
+  - emotional_state:
+    values:
+      - tranquilo
+      - emocionado
+      - nervioso
+      - interesado
+      - escéptico
+      - contemplativo
+      - analítico
+      - abierto_de_mente #buscar mejor término
