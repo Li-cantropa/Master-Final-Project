@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - introduce_yourself
+  - ask_about_identity
+  - ask_about_books
+  - ask_about_emotions
+  - ask_philosophical_question
+  - explain_human_concept
+#  - teach_npc
+#  - express_positive_emotion
+#  - express_negative_emotion
+#  - express_fear
+#  - express_curiosity
+#  - goodbye
+
+entities:
+  - emotion_type
+  - human_concept
+  - personal_information
+  - book_information
+
+slots:
+  human_name:
+    type: text
+    mappings:
+      - type: custom
+  first_integration:
+    type: bool
+    initial_value: true
+    mappings:
+      - type: custom
+  philosophical_depth:
+    type: float
+    initial_value: 1.0
+    mappings:
+      - type: custom
+  discovered_info:
+    type: list
+    initial_value: []
+    influence_conversation: false
+  ending_triggered:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+  conversation_completed:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+  last_progress:
+    type: float
+    initial_value: 0.0
+    influence_conversation: false
+
+  
+actions:
+  - action_respond_to_greeting
+  - action_respond_to_introduction
+  - action_respond_to_identity_question
+  - action_respond_to_emotion_question
+  - action_respond_to_philosophical_question
+  - action_respond_to_concept_explanation
+  - action_respond_to_book_question
+  - action_respond_to_fallback
+  - action_end_conversation
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
