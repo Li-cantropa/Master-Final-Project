@@ -1,0 +1,18 @@
+# Proyecto Sputnik - RASA con Objetivos
+# Python 3.10
+# Miniconda3 environment
+
+
+rasa==3.6.21
+rasa-sdk==3.6.2
+requests==2.32.3
+
+
+spacy==3.8.4
+es_core_news_md @ https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.8.0/es_core_news_md-3.8.0-py3-none-any.whl
+
+
+python-dateutil==2.8.2
+python-dotenv==1.0.0
+PyYAML==6.0.2
+typing_extensions==4.12.2
